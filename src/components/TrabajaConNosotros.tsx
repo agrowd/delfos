@@ -18,7 +18,7 @@ export default function Contacto() {
                 Contactanos
               </h2>
               <p className="text-charcoal/75 mb-10 leading-relaxed">
-                Estamos aquí para escucharte. Ya sea que busques iniciar un proceso terapéutico, alquilar un espacio o sumarte a nuestro equipo, envianos tu consulta y te responderemos a la brevedad.
+                Estamos aquí para escucharte. Ya sea que busques iniciar un proceso terapéutico o sumarte a nuestro equipo, envianos tu consulta y te responderemos a la brevedad.
               </p>
               
               <div className="space-y-5">

@@ -23,8 +23,8 @@ export default function Location() {
                   <div>
                     <p className="text-lg font-semibold text-charcoal">Dirección</p>
                     <p className="text-charcoal/70 leading-relaxed">
-                      Villa Pueyrredón,<br />
-                      Ciudad Autónoma de Buenos Aires, Argentina
+                      Constituyentes 41,<br />
+                      Villa Madero, Buenos Aires, Argentina
                     </p>
                     <p className="text-xs text-secondary mt-2 font-medium italic">* Dirección exacta brindada al agendar la entrevista.</p>
                   </div>
@@ -66,9 +66,9 @@ export default function Location() {
                     <MapPin size={40} className="text-secondary animate-bounce" />
                   </div>
                   <h4 className="text-xl font-heading font-bold text-charcoal mb-2">Mapa Interactivo</h4>
-                  <p className="text-sm text-charcoal/60 mb-6">Estamos ubicados en una zona accesible de Villa Pueyrredón.</p>
+                  <p className="text-sm text-charcoal/60 mb-6">Estamos ubicados en una zona accesible de Villa Madero.</p>
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=Villa+Pueyrredon+CABA" 
+                    href="https://www.google.com/maps/search/?api=1&query=Constituyentes+41+Villa+Madero" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg shadow-primary/30 hover:scale-105 transition-transform"

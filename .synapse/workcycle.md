@@ -8,10 +8,10 @@
 | D-03 | **Contenido en "Vos"** | Se estandarizó el tuteo ("Conócete a ti mismo", "Tu proceso") | 🔒 LOCKED |
 | D-04 | **Patient-First Focus** | Se eliminó "Alquiler" para no distraer al paciente y priorizar conversión | 🔒 LOCKED |
 - Integración del chat con el cliente, archivo juegoteca.txt y las imágenes de la presentación a la estructura web.
-- `components/NuestroEspacio.tsx` - Descripción histórica y cálida
-- `components/Gallery.tsx` - [NEW] Galería de fotos reales
-- `components/Servicios.tsx` - Tarjetas de atención por etapas
-- `components/Location.tsx` - [NEW] Mapa y dirección (Villa Pueyrredón)
+- `src/components/NuestroEspacio.tsx` - Descripción histórica y cálida
+- `src/components/Gallery.tsx` - [UPDATE] Galería reducida a 3 fotos (Selección clienta)
+- `src/components/Servicios.tsx` - Tarjetas de atención por etapas
+- `src/components/Location.tsx` - Mapa y dirección (Villa Pueyrredón)
 - Ampliación de la sección Nuestro Espacio narrando la historia de El Tholos y los sabios de Delfos.
 - Expansión de Servicios para incluir Adultos Mayores y Orientación a Padres.
 - Re-redacción de Juegoteca con la info técnica y ejemplos (Legos, etc) provistos.
@@ -25,20 +25,17 @@
 ## Sesión: Migración Visual (Tailwind + Animaciones)
 - Migración total de Vanilla CSS a Tailwind CSS.
 - Agregado de animaciones con Framer Motion (ScrollReveal) en todas las secciones para un UX atractivo (no flat, no 2010).
-### SESIÓN 06/04/2026 - REVISIONES FASE 2
-- **Navbar:** Reducción de altura a h-24 y logo a 220px para evitar overlap en Hero.
-- **Juegoteca:** Actualización de textos y eliminación de "trastornos".
-- **Gallery:** Implementación de Masonry Grid con 5 fotos reales.
-- **Location:** Añadida sección de mapa y dirección (Villa Pueyrredón).
-- **Contacto:** Rediseño a "Contacto General" con dropdown de motivos (sin Alquiler).
-- **Status:** Ariadne Engine Sync Complete. Ready for GitHub Push.
+### SESIÓN 06/04/2026 - REVISIONES FASE 2 & DEPLOY
+- **Estructura:** El proyecto se movió de `/web` a la raíz para asegurar deploy en Vercel.
+- **Gallery:** Reducida a las 3 fotos preferidas por la clienta (consultorio-1, 3 y espera-1).
+- **Status:** Ariadne Engine Sync Complete. Site pushed to GitHub Main.
 - Se incluyeron iconos elegantes con lucide-react.
 - Creados nuevos componentes: Navbar (con logo integrado) y WhatsAppFloat para agenda flotante.
 - Resolución de errores de compilación anteriores: Borrado del package-lock.json huérfano para Fix Turbopack y agregado suppressHydrationWarning para Fix de extensiones inyectadas en body.
 
 ## Sesión: Iteración Visual Premium (Round 3)
-# 🍏 PROYECTO: DELFOS PSICOLOGÍA [v1.1]
-**Estado:** 🟢 ACTIVE | **Foco actual:** Galería y Contacto Patient-First
+# 🍏 PROYECTO: DELFOS PSICOLOGÍA [v1.2]
+**Estado:** 🟢 ACTIVE | **Foco actual:** Deploy a Vercel y Refinamiento Galería
 - Reescritura completa de Navbar con menú hamburguesa animado (framer-motion AnimatePresence), scroll-aware transparency y enlace al logo blanco.
 - WhatsApp Float rediseñado: tarjeta expandible con texto, botón X, reaparece cada 60 segundos. Usa SVG real de WhatsApp.
 - Hero mejorado: gradient text, blobs pulsantes, doble CTA, bottom fade.

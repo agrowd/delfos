@@ -6,7 +6,7 @@ const servicios = [
   { icon: <Baby size={28} />, title: 'Niños', text: 'Herramientas lúdicas, contención y un entorno a su escala para las primeras etapas del desarrollo.', color: 'from-primary/20 to-primary/5' },
   { icon: <User size={28} />, title: 'Adolescentes', text: 'Escucha activa enfocada en transitar los cambios y potenciar los recursos de identidad y crecimiento.', color: 'from-secondary/40 to-secondary/10' },
   { icon: <User size={28} />, title: 'Adultos', text: 'Espacios orientados a atravesar crisis, sanar heridas emocionales e impulsar el autoconocimiento profundo.', color: 'from-primary/20 to-primary/5' },
-  { icon: <Activity size={28} />, title: 'Adultos y Adultos mayores', text: 'Acompañamiento especializado, escucha empática y contención ante los desafíos propios de esta vital etapa.', color: 'from-secondary/40 to-secondary/10' },
+  { icon: <Activity size={28} />, title: 'Adultos mayores', text: 'Acompañamiento especializado, escucha empática y contención ante los desafíos propios de esta vital etapa.', color: 'from-secondary/40 to-secondary/10' },
   { icon: <HeartHandshake size={28} />, title: 'Terapia de Pareja', text: 'Abordajes para desenredar conflictos, mejorar la comunicación y reconstruir vínculos saludables.', color: 'from-primary/20 to-primary/5' },
   { icon: <BookOpen size={28} />, title: 'Orientación a Padres', text: 'Asesoramiento y herramientas prácticas para afrontar asertivamente la crianza y las dinámicas familiares.', color: 'from-secondary/40 to-secondary/10' }
 ];
