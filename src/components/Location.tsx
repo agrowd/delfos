@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import ScrollReveal from './animations/ScrollReveal';
+import Image from 'next/image';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 
 export default function Location() {
@@ -58,15 +59,22 @@ export default function Location() {
 
           <ScrollReveal delay={0.2}>
             <div className="relative group">
-              {/* Maps Placeholder - Can be replaced with an iFrame or static map image */}
+              {/* Map Image Container */}
               <div className="relative h-[450px] w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
-                <div className="absolute inset-0 bg-stone-200 animate-pulse group-hover:bg-stone-300 transition-colors" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10">
-                  <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mb-4">
-                    <MapPin size={40} className="text-secondary animate-bounce" />
+                <Image 
+                  src="/mapa-delfos.png" 
+                  alt="Ubicación de Delfos Psicología" 
+                  fill 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                
+                {/* Overlay Content */}
+                <div className="absolute inset-0 bg-charcoal/30 flex flex-col items-center justify-center text-center p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+                    <MapPin size={40} className="text-white" />
                   </div>
-                  <h4 className="text-xl font-heading font-bold text-charcoal mb-2">Mapa Interactivo</h4>
-                  <p className="text-sm text-charcoal/60 mb-6">Estamos ubicados en una zona accesible de Villa Madero.</p>
+                  <h4 className="text-xl font-heading font-bold text-white mb-2">Mapa Interactivo</h4>
+                  <p className="text-sm text-white/80 mb-6">Estamos ubicados en una zona accesible de Villa Madero.</p>
                   <a 
                     href="https://www.google.com/maps/search/?api=1&query=Constituyentes+41+Villa+Madero" 
                     target="_blank" 
@@ -75,6 +83,13 @@ export default function Location() {
                   >
                     Cómo llegar
                   </a>
+                </div>
+
+                {/* Always visible small tag */}
+                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md z-20 group-hover:opacity-0 transition-opacity">
+                  <p className="text-primary text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    <MapPin size={12} /> Villa Madero
+                  </p>
                 </div>
               </div>
               

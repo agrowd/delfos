@@ -28,14 +28,16 @@
 ### SESIÓN 06/04/2026 - REVISIONES FASE 2 & DEPLOY
 - **Estructura:** El proyecto se movió de `/web` a la raíz para asegurar deploy en Vercel.
 - **Gallery:** Reducida a las 3 fotos preferidas por la clienta (consultorio-1, 3 y espera-1).
+- **Servicios:** Se ampliaron todas las descripciones de las especialidades (Niños, Adolescentes, Adultos, etc.) con textos más detallados y profesionales.
+- **Dirección:** Actualizada a Constituyentes 41, Villa Madero.
 - **Status:** Ariadne Engine Sync Complete. Site pushed to GitHub Main.
 - Se incluyeron iconos elegantes con lucide-react.
 - Creados nuevos componentes: Navbar (con logo integrado) y WhatsAppFloat para agenda flotante.
 - Resolución de errores de compilación anteriores: Borrado del package-lock.json huérfano para Fix Turbopack y agregado suppressHydrationWarning para Fix de extensiones inyectadas en body.
 
 ## Sesión: Iteración Visual Premium (Round 3)
-# 🍏 PROYECTO: DELFOS PSICOLOGÍA [v1.2]
-**Estado:** 🟢 ACTIVE | **Foco actual:** Deploy a Vercel y Refinamiento Galería
+# 🍏 PROYECTO: DELFOS PSICOLOGÍA [v1.3]
+**Estado:** 🟢 ACTIVE | **Foco actual:** Refinamiento de Copys y Deploy Final
 - Reescritura completa de Navbar con menú hamburguesa animado (framer-motion AnimatePresence), scroll-aware transparency y enlace al logo blanco.
 - WhatsApp Float rediseñado: tarjeta expandible con texto, botón X, reaparece cada 60 segundos. Usa SVG real de WhatsApp.
 - Hero mejorado: gradient text, blobs pulsantes, doble CTA, bottom fade.
