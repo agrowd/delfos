@@ -3,12 +3,12 @@ import ScrollReveal from './animations/ScrollReveal';
 import { User, Users, HeartHandshake, Baby, Activity, BookOpen } from 'lucide-react';
 
 const servicios = [
-  { icon: <Baby size={28} />, title: 'Niños', text: 'Herramientas lúdicas, contención y un entorno a su escala para las primeras etapas del desarrollo.', color: 'from-primary/20 to-primary/5' },
-  { icon: <User size={28} />, title: 'Adolescentes', text: 'Escucha activa enfocada en transitar los cambios y potenciar los recursos de identidad y crecimiento.', color: 'from-secondary/40 to-secondary/10' },
-  { icon: <User size={28} />, title: 'Adultos', text: 'Espacios orientados a atravesar crisis, sanar heridas emocionales e impulsar el autoconocimiento profundo.', color: 'from-primary/20 to-primary/5' },
-  { icon: <Activity size={28} />, title: 'Adultos mayores', text: 'Acompañamiento especializado, escucha empática y contención ante los desafíos propios de esta vital etapa.', color: 'from-secondary/40 to-secondary/10' },
-  { icon: <HeartHandshake size={28} />, title: 'Terapia de Pareja', text: 'Abordajes para desenredar conflictos, mejorar la comunicación y reconstruir vínculos saludables.', color: 'from-primary/20 to-primary/5' },
-  { icon: <BookOpen size={28} />, title: 'Orientación a Padres', text: 'Asesoramiento y herramientas prácticas para afrontar asertivamente la crianza y las dinámicas familiares.', color: 'from-secondary/40 to-secondary/10' }
+  { icon: <Baby size={28} />, title: 'Niños', text: 'A través del juego como herramienta terapéutica, creamos un espacio de contención donde los niños pueden expresar sus emociones, fortalecer su autoestima y superar desafíos del desarrollo en un entorno seguro y a su medida.', color: 'from-primary/20 to-primary/5' },
+  { icon: <User size={28} />, title: 'Adolescentes', text: 'Acompañamos a los jóvenes en la transición hacia la adultez, brindando un espacio de escucha sin juicios donde puedan trabajar su identidad, gestionar las presiones sociales y encontrar herramientas para afrontar los cambios propios de esta etapa.', color: 'from-secondary/40 to-secondary/10' },
+  { icon: <User size={28} />, title: 'Adultos', text: 'Orientado a quienes buscan un proceso de autoconocimiento profundo, sanación de heridas emocionales o herramientas para atravesar crisis personales, laborales o vinculares, recuperando el bienestar y el equilibrio interno.', color: 'from-primary/20 to-primary/5' },
+  { icon: <Activity size={28} />, title: 'Adultos mayores', text: 'Espacio dedicado a la escucha activa y valoración de la experiencia vital. Acompañamos en el proceso de envejecimiento, brindando apoyo emocional ante duelos, cambios en la autonomía y la búsqueda de nuevos sentidos en esta etapa.', color: 'from-secondary/40 to-secondary/10' },
+  { icon: <HeartHandshake size={28} />, title: 'Terapia de Pareja', text: 'Un espacio neutral para desenredar conflictos de comunicación, reconstruir la confianza y fortalecer el vínculo. Trabajamos en la identificación de patrones relacionales para lograr acuerdos saludables y dinámicas de respeto mutuo.', color: 'from-primary/20 to-primary/5' },
+  { icon: <BookOpen size={28} />, title: 'Orientación a Padres', text: 'Brindamos asesoramiento integral y herramientas prácticas para la crianza, ayudando a las familias a gestionar límites, mejorar la comunicación con sus hijos y entender las necesidades emocionales en cada fase del crecimiento.', color: 'from-secondary/40 to-secondary/10' }
 ];
 
 export default function Servicios() {
