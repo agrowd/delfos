@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const photos = [
-  { src: '/gallery/primera-imagen.jpg', alt: 'Nuestro espacio', span: 'md:col-span-2 md:row-span-2' },
-  { src: '/gallery/consultorio-3.jpg', alt: 'Consultorio 3', span: 'md:col-span-2 md:row-span-1' },
+  { src: '/gallery/consultorio-3.jpg', alt: 'Consultorio', span: 'md:col-span-2 md:row-span-2' },
+  { src: '/gallery/primera-imagen.jpg', alt: 'Nuestro espacio', span: 'md:col-span-2 md:row-span-1' },
   { src: '/gallery/consultorio-4.jpg', alt: 'Consultorio 4', span: 'md:col-span-2 md:row-span-1' },
 ];
 
