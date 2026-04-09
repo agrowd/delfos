@@ -1,9 +1,36 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import ScrollReveal from './animations/ScrollReveal';
 import { Send, MapPin, Mail, Phone } from 'lucide-react';
 
 export default function Contacto() {
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [motivo, setMotivo] = useState('consulta');
+  const [mensaje, setMensaje] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const motivoLabel = motivo === 'consulta' ? 'Consulta Psicológica' : 'Sumarse al equipo';
+
+    const text = [
+      `🌿 *Nuevo mensaje desde Delfos Psicología*`,
+      ``,
+      `👤 *Nombre:* ${nombre || '-'}`,
+      `📧 *Email:* ${email || '-'}`,
+      `📱 *Teléfono:* ${telefono || '-'}`,
+      `📋 *Motivo:* ${motivoLabel}`,
+      ``,
+      `💬 *Mensaje:*`,
+      `${mensaje || '-'}`,
+    ].join('\n');
+
+    const url = `https://wa.me/5491166567238?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <section id="contacto" className="py-24 md:py-32 bg-gradient-to-b from-white to-background relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2" />
@@ -58,13 +85,15 @@ export default function Contacto() {
             <ScrollReveal delay={0.2}>
               <form 
                 className="bg-white border border-stone/20 p-7 md:p-10 rounded-3xl shadow-2xl shadow-charcoal/5" 
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
               >
                 <div className="grid sm:grid-cols-2 gap-5 mb-5">
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-charcoal uppercase tracking-wider">Nombre y Apellido</label>
                     <input 
                       type="text" 
+                      value={nombre}
+                      onChange={(e) => setNombre(e.target.value)}
                       className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all placeholder:text-charcoal/30"
                       placeholder="Tu nombre completo"
                     />
@@ -73,6 +102,8 @@ export default function Contacto() {
                     <label className="text-xs font-semibold text-charcoal uppercase tracking-wider">Correo Electrónico</label>
                     <input 
                       type="email" 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all placeholder:text-charcoal/30"
                       placeholder="tu@email.com"
                     />
@@ -84,13 +115,19 @@ export default function Contacto() {
                     <label className="text-xs font-semibold text-charcoal uppercase tracking-wider">Teléfono</label>
                     <input 
                       type="tel" 
+                      value={telefono}
+                      onChange={(e) => setTelefono(e.target.value)}
                       className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all placeholder:text-charcoal/30"
                       placeholder="+54 9 11 0000-0000"
                     />
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-charcoal uppercase tracking-wider">Motivo</label>
-                    <select className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-charcoal/70 appearance-none cursor-pointer">
+                    <select 
+                      value={motivo}
+                      onChange={(e) => setMotivo(e.target.value)}
+                      className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-charcoal/70 appearance-none cursor-pointer"
+                    >
                       <option value="consulta">Consulta Psicológica</option>
                       <option value="equipo">Sumarse al equipo</option>
                     </select>
@@ -101,6 +138,8 @@ export default function Contacto() {
                   <label className="text-xs font-semibold text-charcoal uppercase tracking-wider">Mensaje</label>
                   <textarea 
                     rows={4} 
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
                     className="w-full bg-background/50 border border-stone/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none placeholder:text-charcoal/30"
                     placeholder="Cuéntanos un poco sobre ti o tu consulta..."
                   />
@@ -110,9 +149,13 @@ export default function Contacto() {
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center justify-center gap-3"
                 >
-                  <span>Enviar Mensaje</span>
+                  <span>Enviar por WhatsApp</span>
                   <Send size={16} />
                 </button>
+
+                <p className="text-center text-xs text-charcoal/40 mt-4">
+                  Al presionar el botón se abrirá WhatsApp con tu consulta lista para enviar.
+                </p>
               </form>
             </ScrollReveal>
           </div>
