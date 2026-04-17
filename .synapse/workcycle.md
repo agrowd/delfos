@@ -49,3 +49,8 @@
 - Blog: floating tag badges sobre imágenes, arrow icons.
 - Footer completo: Instagram @delfospsico con SVG, WhatsApp, créditos Nexte Marketing, 4 columnas responsive.
 - globals.css: Google Fonts import directo, smooth scroll global, text-gradient utility, selection color.
+
+## Sesión: 2026-04-17 - Actualización de Galería
+- Reemplazo de las antiguas imágenes de la galería por 5 nuevas fotos provistas por el cliente (sala de espera y consultorios 1 y 2).
+- Ajuste del grid layout del componente `Gallery.tsx` para acomodar 5 imágenes.
+- Push a GitHub.
