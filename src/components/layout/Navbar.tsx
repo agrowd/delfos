@@ -7,11 +7,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 const WA_URL = 'https://wa.me/5491166567238?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20Delfos%20Psicolog%C3%ADa.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20para%20agendar%20una%20entrevista.';
 
 const links = [
-  { href: '#espacio', label: 'Nuestro Espacio' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#enfoques', label: 'Enfoques' },
-  { href: '#juegoteca', label: 'Juegoteca' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '/#espacio', label: 'Nuestro Espacio' },
+  { href: '/#servicios', label: 'Servicios' },
+  { href: '/#enfoques', label: 'Enfoques' },
+  { href: '/#juegoteca', label: 'Juegoteca' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contacto', label: 'Contacto' },
 ];
 
 export default function Navbar() {
@@ -31,22 +32,31 @@ export default function Navbar() {
   }, []);
 
   const handleMobileNav = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setOpen(false);
-    // Small delay so the menu closes before scrolling
-    setTimeout(() => {
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      setOpen(false);
+      const targetId = href.replace('/', '');
+      
+      // If we are on the home page, just scroll
+      if (window.location.pathname === '/') {
+        setTimeout(() => {
+          const el = document.querySelector(targetId);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      } else {
+        // If on another page, navigate to home + anchor
+        window.location.href = href;
       }
-    }, 300);
+    } else {
+      setOpen(false);
+    }
   }, []);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-primary/95 backdrop-blur-xl shadow-lg border-b border-white/10' : 'bg-primary/90 backdrop-blur-md'}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="/" className="flex items-center group">
           <div className="relative w-[150px] h-[55px] md:w-[220px] md:h-[80px] shrink-0 transition-transform duration-300 group-hover:scale-105">
             <Image 
               src="/logo.png" 
