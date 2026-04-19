@@ -72,3 +72,8 @@
 - **Previsualización de Imagen:** Agregado de hook `URL.createObjectURL` en el editor para ver la foto seleccionada instantáneamente antes de la subida a Cloudinary.
 - **Dashboard Interactive:** Separación de componentes de cliente (`DeletePostButton`) para cumplir con las reglas de arquitectura de Next.js.
 - **Performance:** Ajuste de `bodySizeLimit` a 10MB en `next.config.ts` para permitir subida de fotos en alta resolución.
+
+## Sesión: 2026-04-19 - Ajustes Visuales y Contenido
+- **Favicon:** Reemplazo de `public/favicon.png` por `logo-delfos2.png` para unificación de marca.
+- **Footer:** Inclusión de "Adultos" en la lista de servicios de atención (Atención > Adultos) para completar las etapas vitales cubiertas.
+- **Ariadne Engine:** Manteniendo sincronía de memoria.

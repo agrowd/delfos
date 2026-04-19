@@ -38,6 +38,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/80 mb-5">Atención</h4>
             <ul className="space-y-3">
               <li><span className="text-sm text-white/50">Niños y Adolescentes</span></li>
+              <li><span className="text-sm text-white/50">Adultos</span></li>
               <li><span className="text-sm text-white/50">Adultos mayores</span></li>
               <li><span className="text-sm text-white/50">Terapia de Pareja</span></li>
               <li><span className="text-sm text-white/50">Orientación a Padres</span></li>
